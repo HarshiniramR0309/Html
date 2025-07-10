@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <style>
+            img{
+                position:relative;
+            }
+        </style>
+        <title>Animating Spider</title>
+        <script language="JavaScript" type="text/javascript"> 
+          window.onload=init;
+          function init(){
+            document.onmousemove=getCursorXY;
+          }
+          function getCursorXY(){
+            document.getElementById("image").style.left=event.clientX;
+            document.getElementById("image").style.top=event.clientY;
+          }
+            
+        </script>
+    </head>
+    <body>
+        <img  id="image" src="OIP.jpeg" >
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <script>
+            document.write("<font size='5'>");
+            document.writeln("Welcome to my country!<br>");
+            document.writeln("Welcome to my house!<br>");
+            document.writeln("Last date modified :"+document.lastModified);
+            document.bgColor="lightblue";
+            document.fgColor="blue";
+
+            function getElement(){
+                var x=document.getElementById("usr");
+                alert(x.value);
+                var y=document.getElementsByName("cat");
+                alert(y[0].value);
+                alert(y[1].value)
+            }
+        </script>
+    <form>
+    Username:<input type="text" id="usr" value="Kiran"><br>
+    Student:<input name="cat" type="radio" value="S"><br>
+    Staff:<input type="radio" name="cat" value="E"><br>
+    <input type="button" value="click" onclick="getElement();">
+    </form>
+     </body> 
+</html>

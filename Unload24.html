@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <script>
+            var size="big";
+            function OnUnLoad(){
+                alert("The current document will br unloaded!");
+            }
+            function changeSize(){
+                alert('resizing the window');
+            }
+        </script>
+        <body onresize="changeSize();" onunload="OnUnLoad()">
+            <b>Close the window</b>
+            <img name="pet" src="imh.jpg" >
+            
+        </body>
+    </head>
+</html>

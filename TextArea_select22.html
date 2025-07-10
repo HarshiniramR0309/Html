@@ -1,0 +1,22 @@
+<html>
+    <head>
+    <script type="text/javascript">
+        function onSelectInput(){
+            var selText="";
+            //var text=document.activeElement.value;
+            //selText=text.substring(document.frm.tal1.selectionStart,document.frm.tal1.selectionEnd)
+ 
+            var text=document.frm.tal1.value;
+            selText=text.substring(document.frm.tal1.selectionStart,document.frm.tal1.selectionEnd)
+            document.frm.t1.value=selText;
+        }
+    </script>
+</head>
+<body onselectstart="return false">
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit, quas illo labore natus nihil consequuntur mollitia consequatur. Suscipit ratione distinctio, ab cumque illum, mollitia nihil cum tenetur dicta consequatur consequuntur?
+    <form name="frm">
+        <textarea id="tal1" row="5" col="50" onSelect="onSelectInput(this)" onBlur="alert('Thank u')";></textarea>
+        <input type="id" id="t1" size="40">
+    </form>
+</body>
+</html>

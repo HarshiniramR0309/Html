@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script type="text/javascript">
+        function findNext(){
+            var str=document.getElementById("searchstr").value;
+            if(str==""){
+                alert("Please enter some text to sreach!");
+                return;
+            }
+            if(window.find){
+                var found=window.find(str);
+                if(!found){
+                    alert("The following text not found:\n"+str);
+                }
+            }
+            else{
+                alert("Your browser does not support");
+
+                
+
+        }
+    }
+    </script>
+</head>
+<body>
+
+    <div>Thuparku thupaya thupakii thupya thuvum malaui</div>
+<br>
+<input type="text" id="searchstr" value="thu" size="20"/>
+<button onclick="findNext();">Find Next</button>    
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <script type="text/javascript>
+            var n=1;
+            function OpenEyes(){
+                document.getElementById("pic").src="eyesopen.jpeg";
+            }
+            function closeEyes(){
+             document.getElementById("pic").src="closeeyes.jpeg";
+            }
+            function nextimage(){
+                 document.getElementById("pic").src="Quotes/image"+n+".jpg";
+                 if(n<4)
+                   n++;
+                else
+                  n=1;
+            }
+        </script>
+    </head>
+    <form >
+        <img id="pic" src="closeeyes.jpeg" width="250" height="250" onMouseOver="OpenEyes();" onMouseOut="closeEyes();">
+        <img id="quotes" src="next.jpeg" onMouseDown="nextimage();" >
+    </form>
+</html>

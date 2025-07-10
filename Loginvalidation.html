@@ -1,0 +1,106 @@
+<html>
+    <head>
+        <script >
+            function nullcheck(){
+                var username=document.LoginForm.username.value;
+                var password=document.LoginForm.password.value;
+                var phonenumber=document.LoginForm.phonenumber.value;
+                var email=document.LoginForm.email.value;
+                if(username==null||username==""){
+                    alert("Username cant be blank");
+                    return false;
+                }
+                else if(password==null||password==""){
+                    alert("Password cant be blank");
+                    return false;
+
+                }
+                else if(phonenumber==null||phonenumber==""){
+                    alert("Phonenumber cant be blank");
+                    return false;
+                }
+                else if(email==null||email==""){
+                    alert("email cant be blank");
+                    return false;
+                }
+                else if(username.length<3){
+                    alert("Please enter the valid name");
+                    return false;
+                }
+                else if(phonenumber.length!=10){
+                    alert("Please enter valid phonenumber");
+                }
+                 return true;
+            }
+            function validate(obj,event){
+                var k=event.keyCode;
+                var inp=obj.name;
+
+                if(inp=="username"){
+                if((k>=33&&k<=64)||(k>=91&&k<=96)){
+                    alert("Number and special character not allow");
+                    return false;
+                }
+            }
+                else if(inp=="phonenumber"){
+                
+                    if(k>31&&(k<48||k>57)){
+                        alert("alpha and special charcter not allow");
+                        return false;
+                    }
+                }
+
+                else if(inp=="password"){
+            
+                    if(k==32||(k>=42&&k<=47)){
+                        alert("Special character not allow");
+                        return false;
+                    }
+                     return true;
+                }
+            }
+            function CheckPasword(){
+                var password=document.LoginForm.password.value;
+                var paswd = /^(?=.*[0-9])(?=.*[!@#$%^&])[a-zA-Z0-9!@#$%^&]{7,15}$/;
+                if(!password.match(paswd)){
+                    alert("Password must contain atleast one num and special character[7-15]");
+                    return false;
+                }
+                 return true;
+            }
+            function CheckEmail(){
+                var email=document.LoginForm.email.value;
+                var mail=/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;;
+                if(!email.match(mail)){
+                    alert("Email must contain @and.");
+                    return false;
+                }
+                 return true;
+            }
+            function validateSubmit(){
+                var retvalue;
+
+                retvalue=nullcheck();
+                if(retvalue==false){return retvalue;}
+
+                retvalue=CheckPasword();
+                if(retvalue==false){return retvalue;}
+
+                retvalue=CheckEmail();
+                if(retvalue==false){return retvalue;}
+                 return true;
+            }
+       
+        </script>
+    </head>
+    <body>
+        <form action="Welcome.html" name="LoginForm">
+            Username:<input type="text" name="username" onkeypress="return validate(this,event)"/><br>
+            Password:<input type="text" name="password" onkeypress="return validate(this,event)"/><br>
+            Phonenumber:<input type="text" maxlength="10" name="phonenumber" onkeypress="return validate(this,event)"/><br>
+            Email: <input type="text" name="email"/><br>
+            <input type="button" value="Submit" onclick="return validateSubmit();">
+
+        </form>
+    </body>
+</html>

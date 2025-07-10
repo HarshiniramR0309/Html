@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <script>
+            function SumOfTwo(){
+                var a= prompt("Type the first number","");
+                var b= prompt("Type the second number","");
+                alert(parseInt(a)+parseInt(b));
+                var ch= prompt("Do u want to continue?");
+                if(ch==true)
+                  SumOfTwo();
+            }
+        </script>
+    </head>
+    <body>
+        <form action="">
+            <input type="button" value="Addition of two number" onclick="SumOfTwo();">
+        </form>
+    </body>
+</html>

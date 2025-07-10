@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            function selectFruit(select){
+                alert("The Select option is "+select.value);
+            }
+        </script>
+    </head>
+    <body>
+        Select an item from the following list:</br>
+        <select onchange="selectFruit(this)">
+            <option value="A">Apple</option>
+            <option value="B">Orange</option>
+            <option value="C">Mango</option>
+        </select>
+    </body>
+</html>

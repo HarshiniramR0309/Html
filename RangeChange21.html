@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script language="JavaScript" src="ConveretNumber.js"></script>
+        <script>
+        function changeColor(){
+            var r=document.getElementById("red").value;
+            var g=document.getElementById("green").value;
+            var b=document.getElementById("blue").value;
+            var hex='#'+deciToHex(r)+deciToHex(g)+deciToHex(b);
+            document.getElementById("hv").value=hex;
+            document.body.style.backgroundColor=hex;
+        }
+        </script>
+    </head>
+    <body>
+        <form oninput="rv.value=red.value;gv.value=green.value;bv.value=blue.value;"> 
+            Red:<input id="red" type="range" min="0" max="255" onChange="changeColor();"><output name="rv"></output><br>
+            Green:<input id="green" type="range" min="0" max="255" onChange="changeColor();"><output name="gv"></output><br>
+            Blue:<input id="blue" type="range" min="0" max="255" onChange="changeColor();"><output name="bv"></output><br>
+            Hex value for this color is:<output id="hv"></output>
+        </form>
+    </body>
+</html>
